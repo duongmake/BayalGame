@@ -20,7 +20,7 @@ public class ChaseState : StateMachineBehaviour
     {
         Vector2 newPos = new Vector2(target.position.x, animator.transform.position.y);
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, newPos, speed * Time.deltaTime);
-        if (Physics2D.Raycast(borderCheck.position, Vector2.down, 2) == false)
+        if (Physics2D.Raycast(borderCheck.position, Vector2.down, 1) == false)
             animator.SetBool("isChasing", false);
 
         float distance = Vector2.Distance(target.position, animator.transform.position);

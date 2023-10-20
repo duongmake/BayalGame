@@ -18,7 +18,7 @@ public class IdleState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Physics2D.Raycast(borderCheck.position, Vector2.down, 2) == false)
+        if (Physics2D.Raycast(borderCheck.position, Vector2.down, 1) == false)
             return;
 
         float distance = Vector2.Distance(target.position, animator.transform.position);
