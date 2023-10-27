@@ -14,10 +14,10 @@ public class Saw : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * dir * Time.fixedDeltaTime);
-        if (Physics2D.Raycast(rightCheck.position, Vector2.down, 2) == false)
+        if (Physics2D.Raycast(rightCheck.position, Vector2.down, 1) == false)
             dir = -1;
 
-        if (Physics2D.Raycast(leftCheck.position, Vector2.down, 2) == false)
+        if (Physics2D.Raycast(leftCheck.position, Vector2.down, 1) == false)
             dir = 1;
     }
 }
