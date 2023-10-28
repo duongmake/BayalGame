@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public static int health = 3;
+    public static int health ;
 
     public Image[] hearts;
     public Sprite fullHeart;
@@ -13,7 +13,10 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
-        health = 3;
+        if (health == 0)
+        {
+            health = 3;
+        }
     }
 
     // Update is called once per frame
